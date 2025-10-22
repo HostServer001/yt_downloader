@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: yt-dl
+    env: python
+    buildCommand: ""
+    startCommand: python app.py
