@@ -31,5 +31,3 @@ def process():
     except Exception as e:
         return render_template('failed.html',ERROR_MSG=e)
 
-if __name__ == '__main__':
-    app.run(debug=True)
