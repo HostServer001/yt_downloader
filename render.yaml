@@ -3,4 +3,4 @@ services:
     name: yt-dl
     env: python
     buildCommand: ""
-    startCommand: python app.py
+    startCommand: gunicorn wsgi:app
