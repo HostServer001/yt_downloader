@@ -1,16 +1,16 @@
-from flask import Flask, render_template,request,send_file
+from flask import Blueprint, render_template,request,send_file
 from pytubefix import YouTube
 from datetime import datetime
 import os
 
-app = Flask(__name__)
+main = Blueprint(__name__)
 
-@app.route('/')
+@main.route('/')
 def home():
     return render_template('index.html', username='Guest')
 
 
-@app.route('/process', methods=['POST'])
+@main.route('/process', methods=['POST'])
 def process():
     user_text = request.form['user_input']
     
