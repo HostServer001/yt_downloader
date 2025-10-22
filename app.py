@@ -3,14 +3,14 @@ from pytubefix import YouTube
 from datetime import datetime
 import os
 
-main = Flask(__name__)
+app = Flask(__name__)
 
-@main.route('/')
+@app.route('/')
 def home():
     return render_template('index.html', username='Guest')
 
 
-@main.route('/process', methods=['POST'])
+@app.route('/process', methods=['POST'])
 def process():
     user_text = request.form['user_input']
     
