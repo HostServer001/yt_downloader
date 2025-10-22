@@ -1,9 +1,9 @@
-from flask import Blueprint, render_template,request,send_file
+from flask import Flask, render_template,request,send_file
 from pytubefix import YouTube
 from datetime import datetime
 import os
 
-main = Blueprint(__name__)
+main = Flask(__name__)
 
 @main.route('/')
 def home():
