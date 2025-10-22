@@ -15,7 +15,7 @@ def process():
     user_text = request.form['user_input']
     
     try:
-        yt = YouTube(user_text)
+        yt = YouTube(user_text,'WEB')
         video_name = timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         ys = yt.streams.get_highest_resolution()
         ys.download(f"downloads/{video_name}/")
